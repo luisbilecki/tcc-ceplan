@@ -41,7 +41,6 @@
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
 \usepackage{lipsum}       % para geração de dummy text -
-
 % ---
 % Pacote para não colorir os links em citações e no sumário na versão em pdf
 % ---
@@ -150,20 +149,20 @@
     \center    
   	\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirinstituicao} \\
   	\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimircampus} \\
-  	\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimircurso}
-    
-    \vspace*{\fill}
+  	\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimircurso}\\[5.5cm]
+
     {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}}
+    \\[3.5cm]
     
-    \vspace*{\fill}
 	    \begin{Spacing}{1.0}
 	    	\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirtitulo}
 	    \end{Spacing}
-    \vspace*{6.78cm}
+    \vfill
     
     {\bfseries\large\MakeUppercase{\imprimirlocal}}
     \par
     {\bfseries\large\imprimirdata}
+    \vspace{1cm}
   \end{capa}
 }
 
@@ -180,13 +179,12 @@
 \makeatletter
 \renewcommand{\folhaderostocontent}{
 	\center
-	{\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}}
+	{\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirautor}\\[11.25cm]}
 
-	\vspace*{7cm}
-    {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirtitulo}}
+	%\vspace*{7cm}
+    {\ABNTEXchapterfont\bfseries\large\MakeUppercase{\imprimirtitulo}\\[3em]}
 
     %Dados
-    \vspace*{2.5cm}
     \abntex@ifnotempty{\imprimirinforosto}{%
       \hspace{.45\textwidth}
       \begin{minipage}{.5\textwidth}
@@ -205,6 +203,7 @@
     {\bfseries\large\MakeUppercase{\imprimirlocal}}
     \par
     {\bfseries\large\imprimirdata}
+    \vspace{1cm}
   }
 
 %---
